@@ -1,0 +1,13 @@
+<style type="text/css">
+    .char-style {
+        border: solid 2px black;
+        display: inline-block;
+        height: 250px;
+        width: 200px;
+    }
+</style>
+
+<div ng-click="vm.click()" class="char-style">
+    <p>{{ vm.name }}</p>
+    <p>Clicks: {{ vm.characterClickCount }}</p>
+</div>

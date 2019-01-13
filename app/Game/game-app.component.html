@@ -1,0 +1,14 @@
+<div>
+    <h1 ng-if="vm.victory">You Won!</h1>
+    <h1 ng-if="!vm.victory">Ultimate Clicker</h1>
+    <p>Your clicks: {{ vm.totalClickCount }}</p>
+    <character name="Kirby"
+               on-click="vm.clickCharacter"></character>
+    <character name="Mario"
+               on-click="vm.clickCharacter"
+               ng-if="vm.totalClickCount >= 10"></character>
+    <br />
+    <p>
+        <a ng-if="vm.victory" ui-sref="home"><< Return to Main Menu</a>
+    </p>
+</div>
