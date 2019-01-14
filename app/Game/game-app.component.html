@@ -1,12 +1,49 @@
-<div>
-    <h1 ng-if="vm.victory">You Won!</h1>
-    <h1 ng-if="!vm.victory">Ultimate Clicker</h1>
-    <p>Your clicks: {{ vm.totalClickCount }}</p>
-    <character name="Kirby"
-               on-click="vm.clickCharacter"></character>
-    <character name="Mario"
-               on-click="vm.clickCharacter"
-               ng-if="vm.totalClickCount >= 10"></character>
+<div style="text-align: center">
+    <div class="row">
+        <h1 ng-if="vm.victory">You Won!</h1>
+        <h1 ng-if="!vm.victory">Ultimate Clicker</h1>
+        <p id="message">{{ vm.message }}</p>
+        <p>Your clicks: {{ vm.totalClickCount }}</p>
+    </div>
+    <div class="row">
+        <character name="Bubblegum"
+                   on-click="vm.clickCharacter"></character>
+        <character name="Mauricio"
+                   on-click="vm.clickCharacter"
+                   ng-if="vm.totalClickCount >= 5"></character>
+        <character name="Louie G"
+                   on-click="vm.clickCharacter"
+                   ng-if="vm.totalClickCount >= 10"></character>
+        <character name="Danky Kang"
+                   on-click="vm.clickCharacter"
+                   ng-if="vm.totalClickCount >= 15"></character>
+        <character name="Zorldo"
+                   on-click="vm.clickCharacter"
+                   ng-if="vm.totalClickCount >= 20"></character>
+        <character name="Sammy"
+                   on-click="vm.clickCharacter"
+                   ng-if="vm.totalClickCount >= 25"></character>
+        <br />
+        <character name="Ness"
+                   on-click="vm.clickCharacter"
+                   ng-if="vm.totalClickCount >= 50"></character>
+        <character name="Capt. Birdman"
+                   on-click="vm.clickCharacter"
+                   ng-if="vm.totalClickCount >= 30"></character>
+        <character name="Dinosaur"
+                   on-click="vm.clickCharacter"
+                   ng-if="vm.totalClickCount >= 35"></character>
+        <character name="Fox"
+                   on-click="vm.clickCharacter"
+                   ng-if="vm.totalClickCount >= 40"></character>
+        <character name="Sparkrat"
+                   on-click="vm.clickCharacter"
+                   ng-if="vm.totalClickCount >= 45"></character>
+        <character name="Jiggy Withit"
+                   on-click="vm.clickCharacter"
+                   ng-if="vm.totalClickCount >= 50"></character>
+    </div>
+    <br />
     <br />
     <p>
         <a ng-if="vm.victory" ui-sref="home"><< Return to Main Menu</a>

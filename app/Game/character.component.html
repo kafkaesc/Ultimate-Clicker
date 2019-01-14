@@ -2,12 +2,18 @@
     .char-style {
         border: solid 2px black;
         display: inline-block;
+        margin-bottom: 4px;
+        padding-top: 4px;
+        padding-bottom: 4px;
         height: 250px;
         width: 200px;
+        text-align: center;
+        user-select: none;
     }
 </style>
 
 <div ng-click="vm.click()" class="char-style">
+    <img src="{{ vm.characterSprite }}" alt="{{ vm.name }} headshot" width="120" height="180"/>
     <p>{{ vm.name }}</p>
     <p>Clicks: {{ vm.characterClickCount }}</p>
 </div>
